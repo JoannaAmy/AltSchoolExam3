@@ -1,11 +1,21 @@
 <template>
+  <div class="container">
   <div class="counter">
-    <div class="counterImage">
-    <img alt="Counter Image" src="../assets/counter.png" />
-    </div>
-    <h1 class="counterValue">Counter: {{ count }}</h1>
-    
+    <div class="counterP">
+    <!-- <img alt="Counter Image" src="../assets/counter.png" /> -->
+    <p>
+      This is a simple counter app built with Vue 3 and performs Increment, Decrement, Set Value and Reset operations.
+    </p>
 
+    </div>
+
+    <h1 class="counterValue">Counter: {{ count }}</h1>
+
+    
+    <div class="setValue">
+    <input class="input-field" type="number" v-model="value" />
+  </div>
+    
     <div class="btn">
     <button class="btn-increase" @click="increment">
       +
@@ -16,10 +26,6 @@
     </button>
     </div>
 
-    <div class="setValue">
-    <input class="input-field" type="number" v-model="value" />
-    </div>
-
     <div class="btn">
     <input class="submit" type="submit" @click="setValue(value)" value="SET VALUE">
     
@@ -27,9 +33,7 @@
       RESET
     </button>
     </div>
-
-    
-    
+    </div>
   </div>
 </template>
 
@@ -89,7 +93,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  /* margin: 20px auto; */
 }
 input{
   width: 200px;
@@ -106,9 +110,6 @@ input{
   height: 30px;
   border-radius: 10px;
   background-color: azure;
-  /* background-color: rgb(119, 3, 3); */
-
-  /* margin: 0 10px 0 0; */
   padding: 20px;
 }
 input:hover{
@@ -116,21 +117,21 @@ input:hover{
   color: azure;
 }
 .submit{
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   border-radius: 10px 10px 10px 10px;
   background-color:#B10DC9;
   color: white;
   font-size: 1rem;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .submit:hover{
   background-color: rgb(119, 3, 3);
   color: azure;
 }
 .btn-reset{
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   border-radius: 10px;
   background-color:#B10DC9;
   color: white;
@@ -140,17 +141,21 @@ input:hover{
   background-color: rgb(119, 3, 3);
   color: azure;
 }
-.counterImage{
-  width : 500px; 
-  height : 250px;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 .btn{
   margin: 20px 0 0;
 }
 
-.counterImage img{
-  width: 100%;
-  height: 100%;
+.counterP{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
 }
 .counter{
   display: flex;
@@ -159,9 +164,28 @@ input:hover{
   align-items: center;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+}
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}
 
 </style>

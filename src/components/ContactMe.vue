@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-me">
+  <div class="contai">
     <div class="contact-me__container">
       <div class="contact-me__container__left">
         <h1>CONTACT ME</h1>
@@ -87,7 +87,31 @@ p {
   align-items: center;
   font-size: large;
 }
-    
+.a {
+  color: #fff;
+  border: 1px solid #b10dc9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    padding: 20px;
+  }
+}
     
 </style>
 

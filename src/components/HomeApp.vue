@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="container">
         <h1>Home</h1>
         <p>
       This is a simple counter app built with Vue 3 and performs Increment, Decrement and Reset operations. 
@@ -23,7 +23,7 @@ export default {
 <style>
 main {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 50vh;
@@ -34,8 +34,8 @@ main {
     font-size: 1.5rem;
     font-weight: 500;    
     gap: 20px;
-    padding: 100px;
     flex-wrap: wrap;
+    padding: 100px;
 }
 h1{
     font-size: 3rem;
@@ -69,6 +69,8 @@ p{
     background-color: #B10DC9;
     font-family: monospace;
     cursor: pointer;
+    flex-wrap: wrap;
+
 }
 /* .btn-link:hover{
     background-color: #fff;
@@ -84,5 +86,22 @@ p{
 /* .btn-link a:hover{
     background-color: #fff;
 } */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    padding: 20px;
+  }
+}
 
 </style>

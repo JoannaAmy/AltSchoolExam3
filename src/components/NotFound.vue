@@ -1,10 +1,11 @@
 <template>
+    <main class="container">
     <div class="notFound">
-        <h1>404</h1>
         <img src="@/assets/404.png" alt="404" />
-        <h2>Page not found</h2>
-        <p>The page you are looking can not be found</p>
+        <!-- <h1>Page not found</h1>
+        <p>The page you are looking can not be found</p> -->
     </div>
+    </main>
 </template>
 
 <script>
@@ -15,19 +16,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.notFound{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #f5f5f5; */
-    flex-wrap:wrap ;
-    width : 500px; 
-    height : 250px;
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
 }
 
-.notFound img{
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    padding: 20px;
+  }
 }
 </style>
