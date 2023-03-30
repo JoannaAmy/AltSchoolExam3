@@ -68,11 +68,7 @@ main {
   font-weight: 500;
   gap: 20px;
   padding: 100px;
-
-  @media screen and (max-width: 768px) {
-      padding: 1rem;
-      grid-template-columns: 5% 92%;
-    }
+  flex-wrap: wrap;
 }
 h1 {
   font-size: 3rem;
@@ -91,15 +87,7 @@ p {
   align-items: center;
   font-size: large;
 }
-@keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
     
     
 </style>
+

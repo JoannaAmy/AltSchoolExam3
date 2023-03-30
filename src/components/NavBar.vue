@@ -32,6 +32,8 @@ nav{
     font-weight: 700;
     margin-right: auto;
     font-family: cursive;
+    flex-wrap: wrap;
+
 }
 .links{
     display: flex;

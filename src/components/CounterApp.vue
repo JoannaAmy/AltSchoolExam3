@@ -159,6 +159,7 @@ input:hover{
   align-items: center;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  flex-wrap: wrap;
 }
 
 

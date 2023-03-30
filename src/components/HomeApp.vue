@@ -35,6 +35,7 @@ main {
     font-weight: 500;    
     gap: 20px;
     padding: 100px;
+    flex-wrap: wrap;
 }
 h1{
     font-size: 3rem;
